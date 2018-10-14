@@ -1,5 +1,4 @@
 #! usr/bin/python3
-#TODO make this a stand alone file where anythin config related will occur
 
 import configparser
 import os
