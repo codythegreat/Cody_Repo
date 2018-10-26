@@ -18,7 +18,9 @@ musicSelection = [['Lofi Relaxation', 'https://www.youtube.com/watch?v=hHW1oY26k
 def playBedTimeTunes(lengthofPlay, musictoPlay):
 	browser = webdriver.Firefox()
 	browser.get(musictoPlay)
-	time.sleep(lengthofPlay)
+    for i in range(lengthofPlay):
+        for seconds in range(60)
+            time.sleep(1)
 	browser.close()
 
 
@@ -29,4 +31,4 @@ print('input the number corresponding to the playlist you want to hear:')
 for i in range(len(musicSelection)):
 	print(str(i) + ' ' + musicSelection[i][0])
 desiredMusic = int(input())
-playBedTimeTunes(minutesofPlay * 60, musicSelection[desiredMusic][1])
+playBedTimeTunes(minutesofPlay, musicSelection[desiredMusic][1])

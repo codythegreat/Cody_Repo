@@ -1,6 +1,6 @@
 #! usr/bin/python3
-# blackboardInformationGragger.py - a simple file to read information from 
-# blackboard and write it to a txt file for offline use.
+# blackboardInfoGrabber.py - a program that takes screenshots of my blackboard 
+#                            grades and calendar.
 
 import requests
 from bs4 import BeautifulSoup as bsoup 
@@ -40,8 +40,8 @@ def blackboardGradesScreenGrab():
 	gradesScreenShot = browser.save_screenshot('GradesImage' + str(datetime.datetime.now()) + '.png')
 
 
-
-blackboardLogin()
-blackboardCalendarScreenGrab()
-blackboardGradesScreenGrab()
-browser.close()
+if __name__ == '__main__':
+    blackboardLogin()
+    blackboardCalendarScreenGrab()
+    blackboardGradesScreenGrab()
+    browser.close()
