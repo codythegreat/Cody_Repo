@@ -51,7 +51,8 @@ def MainScript():
 	def extractBankStmntAmountsfromExcel():
 		for rowOfBnkStmntAmounts in sheetBnkStmnt['C3' : 'C' + str(sheetBnkStmnt.max_row)]:
 			for amount in rowOfBnkStmntAmounts:
-				amountsOnBnkStmnt.append(amount.value)
+				amount = amount.value.replace(",", "")
+				amountsOnBnkStmnt.append(amount)
 
 
 	def exactMatchTester():
